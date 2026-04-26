@@ -1,0 +1,53 @@
+<section class="py-[90px]" id="projects">
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <div class="text-center mb-[60px]">
+      <span class="section-tag">// what i've built</span>
+      <h2 class="text-[clamp(28px,5vw,40px)] font-bold text-content-primary leading-tight">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let p of projects"
+           class="flex flex-col gap-5 rounded-card-lg p-7 border transition-all duration-200 hover:-translate-y-1.5 hover:shadow-card"
+           [ngClass]="p.highlight
+             ? 'bg-gradient-to-br from-accent/[0.06] to-card border-accent shadow-accent-glow'
+             : 'bg-card border-white/[0.06] hover:border-accent/20'">
+
+        <div class="flex items-start justify-between">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center border border-accent/20"
+               [ngClass]="p.highlight ? 'bg-gradient-accent' : 'bg-accent/15'">
+            <i [class]="p.icon" class="text-[20px]"
+               [ngClass]="p.highlight ? 'text-white' : 'text-accent'"></i>
+          </div>
+          <div class="flex flex-col items-end gap-1.5">
+            <span class="chip">{{ p.type }}</span>
+            <span class="font-mono text-[11px] text-content-muted">{{ p.period }}</span>
+          </div>
+        </div>
+
+        <div class="flex-1">
+          <h3 class="text-[19px] font-bold text-content-primary mb-1">{{ p.title }}</h3>
+          <p class="text-[13px] font-semibold text-accent-light mb-3">{{ p.subtitle }}</p>
+          <p class="text-[14px] text-content-secondary leading-[1.75]">{{ p.description }}</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <div class="flex flex-wrap gap-1.5">
+            <span *ngFor="let t of p.tech" class="chip">{{ t }}</span>
+          </div>
+          <div *ngIf="p.links.length > 0" class="flex gap-3">
+            <a *ngFor="let link of p.links" [href]="link.url" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 text-[13px] font-medium text-accent-light px-3.5 py-1.5 border border-accent/20 rounded-full hover:bg-accent/15 hover:border-accent transition-all duration-200">
+              <i [class]="link.icon"></i> {{ link.label }}
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

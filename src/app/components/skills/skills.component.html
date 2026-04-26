@@ -1,0 +1,40 @@
+<section class="py-[90px] bg-secondary/30" id="skills">
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <div class="text-center mb-[60px]">
+      <span class="section-tag">// my toolkit</span>
+      <h2 class="text-[clamp(28px,5vw,40px)] font-bold text-content-primary leading-tight">
+        Technical <span class="gradient-text">Skills</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let group of skillGroups"
+           class="bg-card border border-white/[0.06] rounded-card-lg p-7 transition-all duration-200 hover:border-accent/20 hover:-translate-y-1">
+
+        <div class="flex items-center gap-3.5 mb-6">
+          <div class="w-10 h-10 rounded-[10px] bg-accent/15 border border-accent/20 flex items-center justify-center flex-shrink-0">
+            <i [class]="group.icon" class="text-accent text-[16px]"></i>
+          </div>
+          <h3 class="text-[16px] font-bold text-content-primary">{{ group.category }}</h3>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div *ngFor="let skill of group.skills">
+            <div class="flex justify-between mb-1.5">
+              <span class="text-[13px] font-medium text-content-primary">{{ skill.name }}</span>
+              <span class="text-[12px] font-mono text-accent">{{ skill.level }}%</span>
+            </div>
+            <div class="h-[5px] bg-white/[0.06] rounded-sm overflow-hidden">
+              <div class="h-full bg-gradient-accent rounded-sm transition-all duration-1000"
+                   [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

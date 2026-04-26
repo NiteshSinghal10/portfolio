@@ -1,0 +1,71 @@
+<section class="py-[90px]" id="about">
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <div class="text-center mb-[60px]">
+      <span class="section-tag">// who am i</span>
+      <h2 class="text-[clamp(28px,5vw,40px)] font-bold text-content-primary leading-tight">
+        About <span class="gradient-text">Me</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[60px] items-start">
+
+      <!-- Left: text -->
+      <div>
+        <p class="text-[17px] text-content-primary leading-[1.85] mb-5">
+          Hi! I'm <strong class="font-semibold">Nitesh Singhal</strong>, a passionate Software Engineer from Modinagar, Uttar Pradesh. I specialize in building robust backend systems, RESTful APIs, and AI-powered developer tools.
+        </p>
+        <p class="text-[15px] text-content-secondary leading-[1.85] mb-5">
+          Over the past <strong class="text-content-primary font-semibold">2+ years at Relinns Technologies</strong>, I've shipped production systems used by real clients — from an Applicant Tracking System to a SaaS chatbot platform serving <strong class="text-content-primary font-semibold">10,000+ clients</strong>. I also built a Model Context Protocol (MCP) server that integrates Claude AI with LinkedIn data to automate recruitment workflows.
+        </p>
+        <p class="text-[15px] text-content-secondary leading-[1.85] mb-7">
+          Outside work, I maintain <strong class="text-content-primary font-semibold">gitron</strong> — an open-source npm CLI package that performs AI-powered code reviews on GitHub and GitLab pull requests using the OpenAI API.
+        </p>
+
+        <div class="flex flex-col gap-[14px] mb-7">
+          <div *ngFor="let h of highlights" class="flex items-center gap-3 text-[14px] text-content-secondary">
+            <i [class]="h.icon" class="text-accent text-[15px] w-5 text-center flex-shrink-0"></i>
+            <span>{{ h.text }}</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="mailto:niteshsinghal9917@gmail.com" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+          <a href="https://www.linkedin.com/in/nitesh-s-49ab6b24b/" target="_blank" class="btn btn-outline">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: stats + info -->
+      <div>
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div *ngFor="let s of stats"
+               class="bg-card border border-white/[0.06] rounded-card p-6 text-center transition-all duration-200 hover:border-accent/20 hover:-translate-y-1">
+            <div class="text-[36px] font-extrabold gradient-text leading-tight">{{ s.value }}</div>
+            <div class="text-[12px] text-content-muted mt-1.5 uppercase tracking-[0.5px]">{{ s.label }}</div>
+          </div>
+        </div>
+
+        <div class="bg-card border border-white/[0.06] rounded-card p-6">
+          <div *ngFor="let row of [
+                {icon:'fas fa-map-marker-alt', key:'Location', val:'Modinagar, UP, India'},
+                {icon:'fas fa-briefcase', key:'Company', val:'Relinns Technologies'},
+                {icon:'fas fa-graduation-cap', key:'Degree', val:'MCA – 8.6 CGPA'},
+                {icon:'fas fa-envelope', key:'Email', val:'niteshsinghal9917@gmail.com'}
+               ]"
+               class="flex justify-between items-center py-2.5 text-[14px] border-b border-white/[0.06] last:border-0">
+            <span class="text-content-secondary flex items-center gap-2">
+              <i [class]="row.icon" class="text-accent w-[14px]"></i> {{ row.key }}
+            </span>
+            <span class="text-content-primary font-medium">{{ row.val }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

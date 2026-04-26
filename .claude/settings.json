@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx @angular/cli version)",
+      "Read(//Users/niteshsinghal/Desktop/**)",
+      "Bash(npx @angular/cli new portfolio --directory portfolio --style=scss --routing=false --skip-git --skip-tests)",
+      "Bash(npm install *)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/navbar/navbar.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/hero/hero.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/about/about.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/experience/experience.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/projects/projects.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/skills/skills.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/education/education.component.scss)",
+      "Bash(> /Users/niteshsinghal/Desktop/portfolio/src/app/components/contact/contact.component.scss)"
+    ]
+  }
+}

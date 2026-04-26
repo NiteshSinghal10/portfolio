@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply font-sans bg-primary text-content-primary leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { @apply transition-colors duration-200 no-underline; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-primary; }
+  ::-webkit-scrollbar-thumb { @apply rounded-sm; background: rgba(108, 99, 255, 0.2); }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-7 py-3 rounded-lg text-[15px] font-medium cursor-pointer transition-all duration-200 font-sans border-0;
+  }
+  .btn-primary {
+    @apply bg-gradient-accent text-white shadow-accent-sm hover:-translate-y-0.5 hover:shadow-accent-lg;
+  }
+  .btn-outline {
+    @apply bg-transparent text-accent-light border border-accent/20 hover:bg-accent/15 hover:border-accent hover:-translate-y-0.5;
+  }
+  .chip {
+    @apply inline-block px-3 py-1 bg-accent/15 border border-accent/20 rounded-full text-xs font-mono text-accent-light whitespace-nowrap;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-br from-accent to-purple-500 bg-clip-text text-transparent;
+  }
+  .section-tag {
+    @apply font-mono text-[13px] text-accent uppercase tracking-[2px] mb-3 block;
+  }
+  .section-line {
+    @apply w-[60px] h-[3px] bg-gradient-accent rounded-sm mx-auto mt-5;
+  }
+}

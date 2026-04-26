@@ -1,0 +1,68 @@
+<section class="py-[90px] bg-secondary/30" id="experience">
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <div class="text-center mb-[60px]">
+      <span class="section-tag">// where i've worked</span>
+      <h2 class="text-[clamp(28px,5vw,40px)] font-bold text-content-primary leading-tight">
+        Work <span class="gradient-text">Experience</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative pl-8 mb-12">
+      <!-- Timeline line -->
+      <div class="absolute left-2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent to-transparent"></div>
+
+      <div *ngFor="let exp of experiences" class="relative mb-8">
+        <!-- Dot -->
+        <div class="absolute -left-[28px] top-6 w-[14px] h-[14px] rounded-full bg-gradient-to-br from-accent to-purple-500 border-[3px] border-primary shadow-[0_0_12px_rgba(108,99,255,0.6)] z-10"></div>
+
+        <!-- Card -->
+        <div class="bg-card border border-white/[0.06] rounded-card-lg p-8 transition-all duration-200 hover:border-accent/20 hover:-translate-y-1">
+
+          <div class="flex flex-wrap justify-between items-start gap-4 mb-6">
+            <div>
+              <h3 class="text-[20px] font-bold text-content-primary mb-1">{{ exp.role }}</h3>
+              <span class="text-[15px] font-semibold gradient-text">{{ exp.company }}</span>
+            </div>
+            <div class="flex flex-col items-end gap-2">
+              <span class="text-[13px] text-content-secondary flex items-center gap-1.5">
+                <i class="fas fa-calendar text-accent"></i> {{ exp.period }}
+              </span>
+              <span class="text-[13px] text-content-secondary flex items-center gap-1.5">
+                <i class="fas fa-map-marker-alt text-accent"></i> {{ exp.location }}
+              </span>
+              <span class="chip">{{ exp.type }}</span>
+            </div>
+          </div>
+
+          <ul class="list-none mb-6 space-y-2">
+            <li *ngFor="let point of exp.points" class="flex gap-2.5 text-[14px] text-content-secondary leading-[1.7]">
+              <i class="fas fa-chevron-right text-accent text-[11px] mt-[5px] flex-shrink-0"></i>
+              <span>{{ point }}</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2">
+            <span *ngFor="let t of exp.tech" class="chip">{{ t }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievement banner -->
+    <div class="flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-br from-accent/10 to-purple-500/10 border border-accent/20 rounded-card-lg px-8 py-7">
+      <div class="w-14 h-14 rounded-full bg-gradient-accent flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-trophy text-white text-[22px]"></i>
+      </div>
+      <div class="text-center sm:text-left">
+        <h4 class="text-[16px] font-bold text-content-primary mb-1.5">Appreciation for Responsibility &amp; Ownership</h4>
+        <p class="text-[14px] text-content-secondary leading-relaxed">
+          Received this award <strong class="text-content-primary">twice</strong> for consistently demonstrating accountability, initiative, and high-quality delivery across critical projects.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

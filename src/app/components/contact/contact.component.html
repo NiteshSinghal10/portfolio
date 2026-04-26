@@ -1,0 +1,75 @@
+<section class="py-[90px] bg-secondary/30" id="contact">
+  <div class="max-w-[1100px] mx-auto px-6">
+
+    <div class="text-center mb-[60px]">
+      <span class="section-tag">// let's connect</span>
+      <h2 class="text-[clamp(28px,5vw,40px)] font-bold text-content-primary leading-tight">
+        Get In <span class="gradient-text">Touch</span>
+      </h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-10 md:gap-[60px] items-start">
+
+      <!-- Intro -->
+      <div>
+        <h3 class="text-[24px] font-bold text-content-primary mb-4">Open to new opportunities</h3>
+        <p class="text-[15px] text-content-secondary leading-[1.8] mb-8">
+          Whether you have a project in mind, want to discuss an opportunity, or just want to say hello —
+          my inbox is always open. I'll do my best to get back to you promptly.
+        </p>
+        <a href="mailto:niteshsinghal9917@gmail.com" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Say Hello
+        </a>
+      </div>
+
+      <!-- Contact cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a *ngFor="let item of contactItems"
+           [href]="item.href || undefined"
+           [target]="item.href && item.href.startsWith('http') ? '_blank' : '_self'"
+           rel="noopener"
+           class="group flex items-center gap-3.5 bg-card border border-white/[0.06] rounded-card p-4 transition-all duration-200"
+           [class.hover:-translate-y-0.5]="!!item.href"
+           [class.hover:border-accent]="!!item.href"
+           [class.hover:bg-gradient-to-br]="!!item.href"
+           [class.cursor-default]="!item.href">
+          <div class="w-9 h-9 rounded-[8px] bg-accent/15 border border-accent/20 flex items-center justify-center flex-shrink-0">
+            <i [class]="item.icon" class="text-accent text-[14px]"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="block text-[11px] text-content-muted uppercase tracking-[0.5px] mb-0.5">{{ item.label }}</span>
+            <span class="block text-[13px] font-medium text-content-primary truncate">{{ item.value }}</span>
+          </div>
+          <i *ngIf="item.href" class="fas fa-arrow-right text-[12px] text-content-muted opacity-0 group-hover:opacity-100 group-hover:text-accent flex-shrink-0 transition-all duration-200"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[0.06] py-8 mt-5">
+  <div class="max-w-[1100px] mx-auto px-6 flex flex-wrap items-center justify-between gap-5">
+    <p class="font-mono text-[18px] font-bold text-content-primary">
+      <span class="text-accent">&lt;</span>NS<span class="text-accent">/&gt;</span>
+    </p>
+    <p class="text-[13px] text-content-muted">
+      Designed &amp; Built by <strong class="text-content-secondary">Nitesh Singhal</strong> &copy; 2024
+    </p>
+    <div class="flex gap-3">
+      <a href="https://www.linkedin.com/in/nitesh-s-49ab6b24b/" target="_blank" aria-label="LinkedIn"
+         class="flex items-center justify-center w-[34px] h-[34px] border border-white/[0.06] rounded-[6px] text-content-secondary text-[14px] hover:text-accent-light hover:border-accent/20 hover:bg-accent/15 transition-all duration-200">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/NiteshSinghal10" target="_blank" aria-label="GitHub"
+         class="flex items-center justify-center w-[34px] h-[34px] border border-white/[0.06] rounded-[6px] text-content-secondary text-[14px] hover:text-accent-light hover:border-accent/20 hover:bg-accent/15 transition-all duration-200">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://npmjs.com/package/gitron" target="_blank" aria-label="npm"
+         class="flex items-center justify-center w-[34px] h-[34px] border border-white/[0.06] rounded-[6px] text-content-secondary text-[14px] hover:text-accent-light hover:border-accent/20 hover:bg-accent/15 transition-all duration-200">
+        <i class="fab fa-npm"></i>
+      </a>
+    </div>
+  </div>
+</footer>

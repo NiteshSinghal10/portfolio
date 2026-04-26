@@ -1,0 +1,98 @@
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20" id="hero">
+
+  <!-- Background -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute w-[500px] h-[500px] bg-accent rounded-full blur-[80px] opacity-[0.15] -top-[100px] -right-[100px] animate-float-slow"></div>
+    <div class="absolute w-[350px] h-[350px] bg-purple-500 rounded-full blur-[80px] opacity-[0.15] -bottom-[50px] -left-[50px] animate-float-slow-rev"></div>
+    <div class="absolute inset-0 bg-grid-overlay [background-size:60px_60px]"></div>
+  </div>
+
+  <div class="max-w-[1100px] mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-[60px] items-center py-10">
+
+    <!-- Text -->
+    <div>
+      <p class="flex items-center gap-3 font-mono text-[14px] text-accent mb-4">
+        <span class="inline-block w-10 h-[2px] bg-accent rounded-sm"></span>
+        Hello, I'm
+      </p>
+      <h1 class="text-[clamp(40px,7vw,72px)] font-extrabold leading-[1.05] text-content-primary mb-4">
+        Nitesh <span class="gradient-text">Singhal</span>
+      </h1>
+      <h2 class="text-[clamp(18px,3vw,24px)] font-normal text-content-secondary mb-6 h-9">
+        <span class="text-content-primary">{{ currentRole }}</span>
+        <span class="text-accent animate-blink">|</span>
+      </h2>
+      <p class="text-[15px] text-content-secondary leading-[1.8] max-w-[520px] mb-9">
+        Results-driven Software Engineer with <strong class="text-content-primary font-semibold">2+ years of experience</strong> building
+        scalable backend systems, microservices, and AI-integrated features using
+        <strong class="text-content-primary font-semibold">Node.js</strong>, <strong class="text-content-primary font-semibold">TypeScript</strong>, and <strong class="text-content-primary font-semibold">Angular</strong>.
+        Open-source contributor and npm package author.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+      </div>
+
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/nitesh-s-49ab6b24b/" target="_blank" rel="noopener" aria-label="LinkedIn"
+           class="flex items-center justify-center w-[42px] h-[42px] border border-accent/20 rounded-lg text-content-secondary text-[16px] hover:bg-accent/15 hover:border-accent hover:text-accent-light hover:-translate-y-[3px] transition-all duration-200">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/NiteshSinghal10" target="_blank" rel="noopener" aria-label="GitHub"
+           class="flex items-center justify-center w-[42px] h-[42px] border border-accent/20 rounded-lg text-content-secondary text-[16px] hover:bg-accent/15 hover:border-accent hover:text-accent-light hover:-translate-y-[3px] transition-all duration-200">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://npmjs.com/package/gitron" target="_blank" rel="noopener" aria-label="npm"
+           class="flex items-center justify-center w-[42px] h-[42px] border border-accent/20 rounded-lg text-content-secondary text-[16px] hover:bg-accent/15 hover:border-accent hover:text-accent-light hover:-translate-y-[3px] transition-all duration-200">
+          <i class="fab fa-npm"></i>
+        </a>
+        <a href="mailto:niteshsinghal9917@gmail.com" aria-label="Email"
+           class="flex items-center justify-center w-[42px] h-[42px] border border-accent/20 rounded-lg text-content-secondary text-[16px] hover:bg-accent/15 hover:border-accent hover:text-accent-light hover:-translate-y-[3px] transition-all duration-200">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual -->
+    <div class="flex justify-center items-center order-first md:order-last">
+      <div class="relative w-[240px] h-[240px] md:w-[320px] md:h-[320px]">
+        <!-- Gradient ring -->
+        <div class="absolute inset-0 rounded-full bg-gradient-accent p-[3px] animate-pulse-glow">
+          <div class="bg-primary rounded-full w-full h-full"></div>
+        </div>
+        <!-- Inner -->
+        <div class="absolute inset-4 rounded-full bg-card flex items-center justify-center border border-accent/20 z-10">
+          <span class="text-[48px] md:text-[64px] font-extrabold gradient-text font-sans">NS</span>
+        </div>
+        <!-- Floating badges -->
+        <div class="hidden md:flex absolute top-5 -right-5 animate-float items-center gap-[6px] bg-card border border-accent/20 rounded-full px-4 py-2 text-xs font-medium text-content-primary shadow-card z-20 whitespace-nowrap">
+          <i class="fab fa-node-js text-accent text-sm"></i> Node.js
+        </div>
+        <div class="hidden md:flex absolute bottom-[60px] -right-[30px] animate-float-2 items-center gap-[6px] bg-card border border-accent/20 rounded-full px-4 py-2 text-xs font-medium text-content-primary shadow-card z-20 whitespace-nowrap">
+          <i class="fab fa-angular text-accent text-sm"></i> Angular
+        </div>
+        <div class="hidden md:flex absolute bottom-5 -left-[10px] animate-float-3 items-center gap-[6px] bg-card border border-accent/20 rounded-full px-4 py-2 text-xs font-medium text-content-primary shadow-card z-20 whitespace-nowrap">
+          <i class="fas fa-database text-accent text-sm"></i> MongoDB
+        </div>
+        <div class="hidden md:flex absolute top-[60px] -left-5 animate-float-4 items-center gap-[6px] bg-card border border-accent/20 rounded-full px-4 py-2 text-xs font-medium text-content-primary shadow-card z-20 whitespace-nowrap">
+          <i class="fab fa-aws text-accent text-sm"></i> AWS
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+    <span class="font-mono text-[11px] text-content-muted tracking-[2px] uppercase">Scroll</span>
+    <div class="relative w-[1.5px] h-10 bg-white/[0.06] rounded-sm overflow-hidden">
+      <div class="absolute left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent animate-scroll-down"></div>
+    </div>
+  </div>
+
+</section>
