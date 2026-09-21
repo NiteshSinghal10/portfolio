@@ -33,6 +33,17 @@ export class ProjectsComponent {
       links: [],
     },
     {
+      title: 'Easyfind',
+      subtitle: 'Merchant Store Layout & Route Management',
+      description: 'Built a merchant-focused platform for a Zambian client that helps teams organize store layouts, manage routes, and streamline day-to-day operations across locations.',
+      tech: ['TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'Angular'],
+      icon: 'fas fa-route',
+      type: 'Client Project',
+      period: '2025 – Present',
+      highlight: false,
+      links: [],
+    },
+    {
       title: 'Project Management Tool',
       subtitle: 'Zoho/Notion-style PM System',
       description: 'Full-scale project management tool with microservices backend (5 services: Gateway, Auth, PM, Notification, Upload). Features JWT + RBAC auth and AWS S3 for file management.',
