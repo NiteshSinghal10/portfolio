@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit, OnDestroy {
-  roles = ['Software Engineer', 'Backend Developer', 'Node.js Expert', 'Open Source Author'];
+  roles = ['Software Engineer', 'React Developer', 'Node.js Expert', 'Open Source Author'];
   currentRole = '';
   roleIndex = 0;
   charIndex = 0;

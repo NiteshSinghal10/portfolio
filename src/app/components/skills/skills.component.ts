@@ -34,8 +34,8 @@ export class SkillsComponent {
       category: 'Frontend',
       icon: 'fas fa-desktop',
       skills: [
-        { name: 'Angular', level: 82 },
-        { name: 'React.js', level: 70 },
+        { name: 'React.js', level: 85 },
+        { name: 'Angular', level: 60 },
       ],
     },
     {
